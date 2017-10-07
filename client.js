@@ -19,7 +19,7 @@ function readyNow(){
     //submitting data to DOM
     $('.table').append(tableRow);
 
-    //attaches event handler to delete button???
+    //attaches event handler to delete button
     $('.deleteButton').on('click', deleteRow);
 
     function totalSalary(){
@@ -30,21 +30,17 @@ function readyNow(){
       }
       $('span.salaryTotal').text(t);
     }
-    //$($('tr.dataRow')[0]).data()
     clearData();
     totalSalary();
 
+    function clearData(){ //clears form inputs
+      $('.input').val('');
+    }
 
-
-  function clearData(){ //clears form inputs
-    $('.input').val('');
-  }
-
-
-  function deleteRow(e){
-    console.log('delete button clicked');
-    $(e.target.parentElement.parentElement).remove();
-    totalSalary();
-  }
+    function deleteRow(e){ //deletes row and updates salary total
+      console.log('delete button clicked');
+      $(e.target.parentElement.parentElement).remove();
+      totalSalary();
+    }
   }
 }
