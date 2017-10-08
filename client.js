@@ -13,14 +13,20 @@ function readyNow(){
     var jobTitle = $('.jobTitle').val();
     var salary = parseInt($('.salary').val());
     //add sytling for deleteButton
-    var tableRow = $('<tr class="dataRow"><td>' + "<button class='deleteButton'>Delete</button>" + '</td><td>' + firstName + ' ' + lastName + '</td><td>' + idNumber + '</td><td>' + jobTitle + '</td><td>' + '</td><td>' + salary +'</td>');
+    var tableRow = $('<tr class="dataRow">' +
+      "<td><button class='deleteButton'>Delete</button></td>" +
+      '<td>' + firstName + ' ' + lastName + '</td>' +
+      '<td>' + idNumber + '</td>' +
+      '<td>' + jobTitle + '</td>' +
+      '<td>' + salary + '</td></tr>');
+
     $(tableRow).data('salary', salary);//stores the salary to that row
+
+    //.find narrows down to add the click handler to the specific button
+    $(tableRow).find('button').on('click', deleteRow);
 
     //submitting data to DOM
     $('.table').append(tableRow);
-
-    //attaches event handler to delete button
-    $('.deleteButton').on('click', deleteRow);
 
     function totalSalary(){
       var t = 0;
