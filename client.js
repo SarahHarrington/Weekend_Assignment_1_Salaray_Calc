@@ -1,26 +1,24 @@
 $(document).ready(readyNow);
 
 function readyNow(){
-  $('.submitButton').on('click', submitData); //button event
+  $('.submitButton').on('click', submitData);
+  //submit button event
 
   function submitData(){ //submit function
-    console.log('submit clicked');
-
-    //var deleteButton = $('.deleteButton');
     var firstName = $('.firstName').val();
     var lastName = $('.lastName').val();
     var idNumber = $('.idNumber').val();
     var jobTitle = $('.jobTitle').val();
     var salary = parseInt($('.salary').val());
-    //add sytling for deleteButton
     var tableRow = $('<tr class="dataRow">' +
-      "<td><button class='deleteButton'>Delete</button></td>" +
+      "<td><button class='deleteButton button'>Delete</button></td>" +
       '<td>' + firstName + ' ' + lastName + '</td>' +
       '<td>' + idNumber + '</td>' +
       '<td>' + jobTitle + '</td>' +
-      '<td>' + salary + '</td></tr>');
+      '<td>' + "$ " + salary + '</td></tr>');
 
-    $(tableRow).data('salary', salary);//stores the salary to that row
+    //stores the monthly salary to that row
+    $(tableRow).data('salary', salary / 12);
 
     //.find narrows down to add the click handler to the specific button
     $(tableRow).find('button').on('click', deleteRow);
@@ -30,11 +28,11 @@ function readyNow(){
 
     function totalSalary(){
       var t = 0;
-      var rows = $('tr.dataRow'); //creates array of rows that are created
+      var rows = $('tr.dataRow'); //creates array of rows as rows are added
       for (var i = 0; i < rows.length; i++) {
         t += $(rows[i]).data('salary');
       }
-      $('span.salaryTotal').text(t);
+      $('span.salaryTotal').text(t.toFixed(2));
     }
     clearData();
     totalSalary();

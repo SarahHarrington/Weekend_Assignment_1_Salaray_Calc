@@ -24,8 +24,9 @@ body {
   margin-right: auto;
   background-color: #D0D7D9;
   padding-top: 20px;
-  border-left: 1px solid #3E3F40;
-  border-right: 1px solid #3E3F40;
+  border-left: 2px solid #26020C;
+  border-right: 2px solid #26020C;
+  border-bottom: 2px solid #26020C;
 }
 
 .form {
@@ -41,18 +42,22 @@ body {
   padding-top: 20px;
 }
 
-.submitButton {
-  height: 25px;
-  width: 100px;
+.button {
   border-radius: 5px;
   font-family: 'Arimo', sans-serif;
-  font-size: 16px;
   background-color: #212226;
   color: #BFD962;
   border: none;
 }
 
-.submitButton:hover {
+.submitButton {
+  height: 25px;
+  width: 100px;
+  font-size: 14px;
+
+}
+
+.button:hover {
   background-color: #3E3F40;
 }
 
@@ -79,21 +84,6 @@ body {
 
 td {
   text-align: center;
-}
-
-.deleteButton {
-  background-color: #212226;
-  color: #BFD962;
-  border-radius: 5px;
-  border: none;
-}
-
-.deleteButton:hover {
-  background-color: #3E3F40;
-}
-
-.employeeDisplay {
-  border-bottom: 1px solid #3E3F40;
 }
 
 .inputText {

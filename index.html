@@ -16,23 +16,23 @@
       <div class="form"><!--user input -->
         <div class="first"><!--first name field-->
           <p class='inputText'>First Name: </p>
-          <input type="text" class='firstName input'>
+          <input type="text" class='firstName input' placeholder="First Name">
         </div>
         <div class="last"><!--last name field-->
           <p class='inputText'>Last Name: </p>
-          <input type="text" class="lastName input">
+          <input type="text" class="lastName input" placeholder="Last Name">
         </div>
         <div class="idNum"><!--ID number field-->
           <p class='inputText'>ID Number: </p>
-          <input type="text" class="idNumber input">
+          <input type="text" class="idNumber input" placeholder="Employee ID">
         </div>
         <div class="title"><!--title field-->
           <p class='inputText'>Job Title: </p>
-          <input type="text" class="jobTitle input">
+          <input type="text" class="jobTitle input" placeholder="Job Title">
         </div>
         <div class="employeeSalary"><!--salary-->
-          <p class='inputText'>Employee Salary:</p>
-          <input type="text" class='salary input'>
+          <p class='inputText'>Annual Employee Salary:</p>
+          <input type="number" class='salary input' placeholder="Annual Salary">
         </div>
         <div class="submit"><!--submit form-->
           <button type="button" class="submitButton">Submit</button>
@@ -40,9 +40,9 @@
       </div>
       <div class="salaryCalculation"><!--salaray calculation-->
         <div class="salaryDisplay">
-          <p>Total Monthly Salary: $ <span class="salaryTotal"></span></p>
+          <p>Total Monthly Payroll: $ <span class="salaryTotal"></span></p>
         </div>
-      </div>
+      </div><!--end salary calculation-->
       <div class="employeeDisplay"><!--list of employees entered-->
         <table class='table'>
           <tr class='headerRow'>
@@ -50,10 +50,10 @@
             <th class='tableHeader'>Employee Name</th>
             <th class='tableHeader'>Employee ID</th>
             <th class='tableHeader'>Job Title</th>
-            <th class='tableHeader'>Salary</th>
+            <th class='tableHeader'>Annual Salary</th>
           </tr>
         </table>
       </div>
-    </div>
+    </div><!--end container-->
   </body>
 </html>
