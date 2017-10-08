@@ -81,6 +81,26 @@ td {
   text-align: center;
 }
 
+.deleteButton {
+  background-color: #212226;
+  color: #BFD962;
+  border-radius: 5px;
+  border: none;
+}
+
+.deleteButton:hover {
+  background-color: #3E3F40;
+}
+
 .employeeDisplay {
   border-bottom: 1px solid #3E3F40;
+}
+
+.inputText {
+  margin: 5px;
+}
+
+input {
+  width: 200px;
+  height: 25px;
 }
