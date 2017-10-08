@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Salary Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="client.js"></script>
   </head>
   <body>
     <div class="header">
-      Salary Calculator
+      <p class='headerText'>Salary Calculator</p>
     </div>
     <div class="container">
       <div class="form"><!--user input -->
@@ -39,13 +40,12 @@
       </div>
       <div class="salaryCalculation"><!--salaray calculation-->
         <div class="salaryDisplay">
-          <p>Total Salary:</p>
-          <span class="salaryTotal"></span>
+          <p>Total Monthly Salary: $ <span class="salaryTotal"></span></p>
         </div>
       </div>
       <div class="employeeDisplay"><!--list of employees entered-->
         <table class='table'>
-          <tr class='header row'>
+          <tr class='headerRow'>
             <th class='tableHeader'>Delete</th>
             <th class='tableHeader'>Employee Name</th>
             <th class='tableHeader'>Employee ID</th>

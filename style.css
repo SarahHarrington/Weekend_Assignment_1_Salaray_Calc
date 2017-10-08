@@ -1,22 +1,86 @@
 body {
   margin: 0;
+  font-family: 'Arimo', sans-serif;
 }
 
 .header {
   height: 60px;
   width: 100%;
-  background-color: #400515;
-  color: #F2F2F2;
+  background-color: #BFD962;
+  color: #212226;
+  text-align: center;
+  border-bottom: 2px solid #26020C;
+}
+
+.header p {
+  margin-top: 0;
+  font-size: 50px;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: #734854;
+  background-color: #D0D7D9;
+  padding-top: 20px;
+  border-left: 1px solid #3E3F40;
+  border-right: 1px solid #3E3F40;
+}
+
+.form {
+  margin-left: 10px;
+}
+
+.salaryDisplay p{
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.submit {
+  padding-top: 20px;
+}
+
+.submitButton {
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  background-color: #212226;
+  color: #BFD962;
+  border: none;
+}
+
+.submitButton:hover {
+  background-color: #3E3F40;
+}
+
+.table {
+  width: 800px;
 }
 
 .tableHeader {
-  background-color: #F2F2F2;
-  color: #26020C;
+  background-color: #212226;
+  color: #BFD962;
+}
+
+.headerRow {
+  height: 30px;
+}
+
+.dataRow {
+    background-color: #F2F2F2;
+    color: #26020C;
+    height: 15px;
+    font-size: 16px;
+    height: 25px;
+}
+
+td {
+  text-align: center;
+}
+
+.employeeDisplay {
+  border-bottom: 1px solid #3E3F40;
 }
