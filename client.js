@@ -26,25 +26,26 @@ function readyNow(){ //function to start jQuery
     //submitting data to DOM
     $('.table').append(tableRow);
 
-    function totalSalary(){
-      var t = 0;
-      var rows = $('tr.dataRow'); //creates array of rows as rows are added
-      for (var i = 0; i < rows.length; i++) {
-        t += $(rows[i]).data('salary');
-      }
-      $('span.salaryTotal').text(t.toFixed(2));
-    }
     clearData();
     totalSalary();
+  }
 
-    function clearData(){ //clears form inputs
-      $('.input').val('');
+  function totalSalary(){
+    var t = 0;
+    var rows = $('tr.dataRow'); //creates array of rows as rows are added
+    for (var i = 0; i < rows.length; i++) {
+      t += $(rows[i]).data('salary');
     }
+    $('span.salaryTotal').text(t.toFixed(2));
+  }
 
-    function deleteRow(e){ //deletes row and updates salary total
-      console.log('delete button clicked');
-      $(e.target.parentElement.parentElement).remove();
-      totalSalary();
-    }
+  function clearData(){ //clears form inputs
+    $('.input').val('');
+  }
+
+  function deleteRow(e){ //deletes row and updates salary total
+    console.log('delete button clicked');
+    $(e.target.parentElement.parentElement).remove();
+    totalSalary();
   }
 }
