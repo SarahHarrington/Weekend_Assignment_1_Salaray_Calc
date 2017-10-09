@@ -1,6 +1,6 @@
 $(document).ready(readyNow);
 
-function readyNow(){
+function readyNow(){ //function to start jQuery
   $('.submitButton').on('click', submitData);
   //submit button event
 
